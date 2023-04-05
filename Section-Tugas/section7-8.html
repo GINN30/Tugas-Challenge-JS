@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Input</title>
+</head>
+
+<body>
+    <h1>Form Input</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">-- Pilih Jenis Kelamin --</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        // Deklarasi untuk mengambil nilai input dari form
+        const form = document.getElementById("myForm");
+        const result = document.getElementById("result");
+
+        // melakukan validasi input
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const gender = form.elements["gender"].value;
+            const phone = form.elements["phone"].value;
+
+            if (name == "") {
+                alert("Nama tidak boleh kosong")
+            } else if (!email.includes("@")) {
+                alert("Email tidak valid")
+            } else if (email == "") {
+                alert("Email tidak boleh kosong")
+            } else if (gender == "") {
+                alert("Gender tidak boleh kosong")
+            } else if (isNaN(phone)) {
+                alert("Nomer telepon harus berupa angka")
+            } else {
+                // menampilkan hasil dari inputan
+                alert("bershasil Mengisi Form")
+                result.innerHTML = `
+          <p>Name: ${name}</p>
+          <p>Email: ${email}</p>
+          <p>Gender: ${gender}</p>
+          <p>Phone: ${phone}</p>
+        `;
+            }
+        });
+    </script>
+</body>
+
+</html>
