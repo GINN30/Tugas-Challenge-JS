@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 3.</title>
+</head>
+<body>
+    <!-- deklarasi untuk menyelesaikan peertanyaan dengan div -->
+    <div>
+        <p>Bakso Mahal Banget</p>
+        <ul>
+            <li>Jerohan</li>
+            <li class="selected">Pedes</li>
+            <li>Belungan</li>
+        </ul>
+    </div>
+
+    <!-- Script JS -->
+    <script>
+        // deklarasi agar dapat menggunakan method parentNode
+        const p = document.querySelector('p')
+        const parent = p.parentNode
+        console.log(parent);
+
+        // deklarasi agar dapat menggunakan method children
+        const ul = document.querySelector('ul')
+        const children = ul.children
+        console.log(children)
+
+        // deklarasi agar dapat menggunakan method previousElementSibling dan nextElementSibling
+        const select = document.querySelector('.selected')
+        const prev = select.previousElementSibling
+        const next = select.nextElementSibling
+        console.log(prev)
+        console.log(next)
+    </script>
+</body>
+</html>

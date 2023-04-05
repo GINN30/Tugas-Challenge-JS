@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 5.</title>
+</head>
+
+<body>
+    <!-- case 1 dengan tag button -->
+    <button id="MyBTN">Klik Gua!</button>
+
+    <!-- case 2 dan 3 dengan tag img -->
+    <img id="MyIMG" src="image.jpg" alt="Gambar">
+
+    <!-- Script JS -->
+    <script>
+        // deklarasi btn untuk mengubah atribute menjadi disable
+        const btn = document.getElementById("MyBTN")
+        btn.setAttribute("disable", "true")
+
+        // deklarasi img untuk mendapatkan nilai atribut alt dari img dengan id MyIMG
+        const img = document.getElementById("MyIMG");
+        const altText = img.getAttribute("alt");
+        console.log(altText); // Output: "Gambar"
+
+        // deklarasi untuk menampilkan atribute alt dengan queryselector img
+        const gambar = document.querySelector('img');
+        if (gambar.hasAttribute('alt')) {
+            console.log('Gambar memiliki atribut alt');
+        } else {
+            console.log('Gambar tidak memiliki atribut alt');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 6.</title>
+</head>
+
+<body>
+    <!-- case untuk case 1 dan 2 -->
+    <h1 id="my-element">Adya Ginansah</h1>
+
+    <!-- case 3 dengan tag button -->
+    <button id="my-button" class="btn">Click me</button>
+
+    <!-- Script JS -->
+    <script>
+        // deklarasi untuk membuat bacground color menggunakan style property
+        const color = document.getElementById("my-element");
+        color.style.backgroundColor = "red";
+
+        // deklarasi untuk menampilkan fontsize di console dengan getcomputedstyle 
+        const elem = document.getElementById("my-element");
+        const styles = window.getComputedStyle(elem);
+        const fontSize = styles.getPropertyValue('font-size');
+        console.log(fontSize);
+
+        // deklarasi untuk menambahkan kelas CSS active dengan menggunakan classlist 
+        const btn = document.getElementById("my-button");
+        btn.addEventListener("click", function () {
+            btn.classList.add("active");
+        });
+    </script>
+</body>
+
+</html>

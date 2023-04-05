@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 2.</title>
+</head>
+<body>
+    <!-- merubah warna dari text dengan id menggunakan javascript -->
+    <h5 id="example">Adya Ginansah</h5>
+
+    <!-- menampilkan value dari inputan di dalam console log dengan js -->
+    <input type="text" name="nama" value="E. Yeager">
+
+    <!-- menampilkan indikasi paragraph dengan tag p -->
+    <p>paragraph 1.</p>
+    <p>paragraph 2.</p>
+
+    <!-- Script JS -->
+    <script>
+        // deklarasi variable ex untuk mengambil element yang memiliki id example
+        var ex = document.getElementById("example")
+        // ubah warna text dengan menggunakan variable ex
+        ex.style.color = "blue"
+
+        // deklarasi variable inp untuk mengambil element yang memiliki name nama
+        var inp = document.getElementsByName("nama")
+        // memanggil value dari element di console log
+        console.log(inp[0].value)
+
+        // deklarasi variable paraf untuk mengambil element dengan tag p
+        var paraf = document.getElementsByTagName("p")
+        // perulangan untuk merubah warna dari text pada tag p
+        for (var i = 0; i < paraf.length; i++) {
+            paraf[i].style.color = "red";
+            
+        }
+    </script>
+</body>
+</html>

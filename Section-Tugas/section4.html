@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 4.</title>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <div id="container">
+        <p>Paragraf 1</p>
+        <p>Paragraf 2</p>
+    </div>
+
+    <!-- Script JS -->
+    <script>
+        // contoh penggunaan method after dengan memasukkan elemen baru
+        const newItem = document.createElement("li")
+        newItem.textContent = "Item 3"
+
+        const secondItem = document.querySelector("ul li:nth-child(2)")
+        secondItem.after(newItem)
+
+        // contoh penggunaan method method append dengan memasukkan elemen baru pada p
+        const newParagraph = document.createElement("p")
+        newParagraph.textContent = "Paragraph 3"
+
+        // memasukkan paragraph 3 pada li
+        const container = document.querySelector("#container")
+        container.append(newParagraph);
+
+        // contoh penggunaan method prepend dengan menggunakan div yang sudah di deklarasikan
+        const newParaph = document.createElement("p")
+        newParaph.textContent = "Paragraf 0";
+
+        // memasukkan paragraph 0 pada li
+        const con = document.querySelector("#container")
+        con.prepend(newParaph);
+    </script>
+</body>
+
+</html>
